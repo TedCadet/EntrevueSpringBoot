@@ -3,11 +3,11 @@ package com.example.entrevueSpringBoot.Exceptions;
 public class FilmNotFoundException extends RuntimeException{
 
 
-    FilmNotFoundException(String msg) {
+    public FilmNotFoundException(String msg) {
         super(msg);
     }
 
-    FilmNotFoundException(Long id) {
+    public FilmNotFoundException(Long id) {
         super("Could not find film " + id);
     }
 }

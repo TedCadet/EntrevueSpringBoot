@@ -10,13 +10,13 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface ActeurMapper {
     
-    // Retourne une instance du mapper et donne access a l'implementation du mapper aux clients
+    // Retourne une instance du mapper et donne accès à l'implémentation du mapper aux clients
     ActeurMapper INSTANCE = Mappers.getMapper(ActeurMapper.class);
 
-    // prend un dto en entree et retourne l'entite qui le correspond
+    // prend un dto en entrée et retourne l'entité qui le correspond
     ActeurEntity fromDto(ActeurDTO ActeurDto);
 
-    // prend une entite en entree et retourne le dto qui le correspond
+    // prend une entité en entrée et retourne le dto qui le correspond
     @InheritInverseConfiguration
     ActeurDTO toDto(ActeurEntity ActeurEntity);
 }

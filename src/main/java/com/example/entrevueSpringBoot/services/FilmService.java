@@ -7,15 +7,29 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+/*
+    FilmService va gérer les méthodes CRUD (Create, Read, Update, Delete)
+    Elle reçoit comme argument par injection filmRepository qui est une interface contenant les méthodes CRUD
+ */
 @RequiredArgsConstructor
 @Service
 public class FilmService {
     private final FilmRepository filmRepository;
 
+    /*
+        trouve un film grâce à son id dans la db
+        arg: l'id du film
+        return: le film ou une valeur null
+     */
     public Optional<FilmEntity> findById(Long id) {
         return filmRepository.findById(id);
     }
 
+    /*
+        enregistre un film dans la db
+        arg: un filmEntity qui se retrouvera dans la db
+        return: un FilmEntity
+     */
     public FilmEntity save(FilmEntity film) {
         return filmRepository.save(film);
     }

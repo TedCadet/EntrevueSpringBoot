@@ -8,6 +8,7 @@ public class EntrevueSpringBootApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EntrevueSpringBootApplication.class, args);
+		String s;
 	}
 
 }

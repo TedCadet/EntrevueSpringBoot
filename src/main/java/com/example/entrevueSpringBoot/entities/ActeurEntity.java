@@ -18,7 +18,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class ActeurEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private long id;
 
     @Column(nullable = false)

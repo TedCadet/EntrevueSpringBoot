@@ -16,4 +16,10 @@ public interface FilmMapper {
 
     // prend une entite en entree et retourne le dto qui le correspond
     FilmDTO toDto(FilmEntity filmEntity);
+
+    // prend un iterable de dto et le transforme en un iterable d'entite
+    Iterable<FilmEntity> getFilmsFromDto(Iterable<FilmDTO> filmDtos);
+
+    // prend une liste d'entite et le transforme en un iterable de dto
+    Iterable<FilmDTO> getFilmsToDto(Iterable<FilmEntity> filmEntities);
 }

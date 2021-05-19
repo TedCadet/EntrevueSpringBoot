@@ -20,15 +20,18 @@ import java.util.List;
 @AllArgsConstructor
 public class FilmEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private  long id;
+    @GeneratedValue
+    private long id;
+
     @Column(nullable = false)
-    private  String titre;
+    private String titre;
+
     @Column(nullable = false)
-    private  String description;
+    private String description;
+
     @Column(nullable = false)
     @OneToMany(cascade = CascadeType.ALL)
-    private  List<ActeurEntity> acteurs;
+    private List<ActeurEntity> acteurs;
 
 
 }

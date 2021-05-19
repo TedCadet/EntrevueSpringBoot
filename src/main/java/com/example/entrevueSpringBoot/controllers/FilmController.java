@@ -31,6 +31,17 @@ public class FilmController {
     private final FilmService filmService;
     private final FilmMapper filmMapper;
 
+
+    /*
+        GET method pour obtenir tous les films
+        TODO: throw une erreur si il n'y a pas de films
+     */
+    @GetMapping("")
+    public ResponseEntity<Iterable<FilmDTO>> findAll() {
+        Iterable<FilmEntity> films = filmService.findAll();
+        return ResponseEntity.ok(filmMapper.getFilmsToDto(films));
+    }
+
     /* GET methode pour obtenir un  film par son id
         arg: id du film retrouvé dans le url
      */
